@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Co wpisać do llms.txt, żeby nie zaszkodzić (i czego po tym pliku nie oczekiwać)</title>
+<meta name="description" content="Plik llms.txt jest dziś sprzedawany jako „robots.txt dla sztucznej inteligencji” i sposób na cytowania w ChatGPT. Zanim ktoś zapłaci za jego wdrożenie albo…">
+<meta name="author" content="Adrian Grabski">
+<link rel="author" href="https://adriangrabski.pl/o-mnie/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://adriangrabski.pl/#person",
+      "name": "Adrian Grabski",
+      "jobTitle": "Specjalista SEO i GEO",
+      "description": "Niezależny konsultant SEO i GEO (AI search) z Łodzi, w wyszukiwarkach od 2002 roku.",
+      "url": "https://adriangrabski.pl/",
+      "sameAs": [
+        "https://adriangrabski.pl/",
+        "https://www.wikidata.org/wiki/Q142116517"
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Co wpisać do llms.txt, żeby nie zaszkodzić (i czego po tym pliku nie oczekiwać)",
+      "inLanguage": "pl",
+      "author": {
+        "@id": "https://adriangrabski.pl/#person"
+      },
+      "datePublished": "2026-11-12"
+    }
+  ]
+}
+</script>
+<style>
+:root {
+  --accent: #1f6feb;
+  --accent-soft: #dbeafe;
+  --bg: #f7f5f2;
+  --card: #ffffff;
+  --text: #1c1917;
+  --muted: #57534e;
+  --line: #e7e5e4;
+}
+* { box-sizing: border-box; }
+html { font-size: 18px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+.wrap { max-width: 740px; margin: 0 auto; padding: 28px 20px 72px; }
+header.site {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 12px;
+  margin-bottom: 2rem;
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+header.site a { color: var(--accent); text-decoration: none; font-weight: 600; }
+header.site a:hover { text-decoration: underline; }
+.kicker { color: var(--muted); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.08em; }
+h1 { font-size: 2rem; line-height: 1.25; margin: 0 0 0.6em; }
+.meta {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 2em;
+}
+article h2 { font-size: 1.35rem; line-height: 1.3; margin-top: 1.9em; }
+article p { margin: 0 0 1em; }
+a { color: var(--accent); }
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 0.05em 0.35em;
+  border-radius: 4px;
+}
+.author {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 16px;
+  margin-top: 2.8em;
+  align-items: start;
+}
+.author img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #ddd;
+}
+.author h2 { margin: 0 0 0.35em; font-size: 1.05rem; font-family: system-ui, sans-serif; }
+.author p { margin: 0; font-size: 0.95rem; }
+footer {
+  margin-top: 2.2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--line);
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+footer a { color: var(--accent); }
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+  h1 { font-size: 1.55rem; }
+  .author { grid-template-columns: 1fr; }
+  header.site { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <span class="kicker">Notatki SEO i GEO</span>
+  <a href="https://adriangrabski.pl/">adriangrabski.pl</a>
+</header>
+<article>
+<h1>Co wpisać do llms.txt, żeby nie zaszkodzić (i czego po tym pliku nie oczekiwać)</h1>
+<p class="meta">Adrian Grabski · 12 listopada 2026 · Łódź</p>
+<p>Plik llms.txt jest dziś sprzedawany jako „robots.txt dla sztucznej inteligencji” i sposób na cytowania w ChatGPT. Zanim ktoś zapłaci za jego wdrożenie albo uzna temat za zamknięty, warto oddzielić higienę od dźwigni. Poniżej stanowisko, które w przewodniku GEO opisuje Adrian Grabski, <a href="https://adriangrabski.pl/freelancer-seo/">specjalista SEO</a> i GEO z Łodzi, pracujący w wyszukiwarkach od 2002 roku.</p>
+<h2>Czym w ogóle jest llms.txt</h2>
+<p>llms.txt to plik Markdown umieszczany w katalogu głównym domeny. Działa jak krótki spis treści dla modeli językowych: wskazuje najważniejsze strony i w kilku zdaniach je opisuje. Propozycję standardu opublikował we wrześniu 2024 roku Jeremy Howard. Standard powstał oddolnie i przyjął się głównie w dokumentacjach technicznych, a nie jako oficjalny mechanizm Google, OpenAI czy Antropic.</p>
+<p>To ważne rozróżnienie. Plik może być poprawny, czytelny i kompletny, a mimo to nie wpłynąć na to, czy model wskaże Twoją markę w odpowiedzi.</p>
+<h2>Czego po tym pliku nie warto obiecywać</h2>
+<p>Google w przewodniku z 15 maja 2026 roku podaje wprost, że llms.txt nie używa. Adobe zmierzyło tysiąc domen przez 30 dni i nie zaobserwowało zapytań botów o ten plik. Adrian Grabski nazywa więc llms.txt „tanią higieną”: koszt wdrożenia to mniej więcej kwadrans, a oczekiwanie, że sam plik podniesie cytowania, jest nieuzasadnione.</p>
+<p>W praktyce oznacza to dwie rzeczy. Po pierwsze, warto ten plik mieć, jeśli i tak porządkujesz informacje o firmie. Po drugie, nie powinien być głównym punktem <a href="https://adriangrabski.pl/audyt-seo/">audyt SEO</a> ani osobną, drogą usługą „optymalizacji pod AI”.</p>
+<h2>Co wpisać, żeby nie zaszkodzić</h2>
+<p>Skoro koszt jest niski, liczy się jakość wpisu, a nie jego długość. Dobry llms.txt jest spójny z tym, co widać na stronie, i nie próbuje oszukać modelu.</p>
+<p>W pliku powinny znaleźć się: pełna nazwa firmy albo osoby, jednozdaniowy opis działalności, adres kanonicznej strony, kilka najważniejszych URL-i z krótkim opisem oraz informacja, kim jest autor merytoryczny. Jeśli prowadzisz kilka linii oferty, wypisz je tak, jak są opisane na stronie, a nie w wersji „najlepsi w Polsce”.</p>
+<p>Czego unikać: upychania fraz, sprzecznych danych (inna nazwa, inny opis, inny zakres usług niż w stopce), listy stu podstron „na wszelki wypadek” i obietnic, których nie ma na stronie. Princeton w pracy z KDD 2024 pokazał, że keyword stuffing obniża widoczność na Perplexity o około 10 procent. Model nie kupuje przymiotników. Kupuje fakty. Ta sama zasada dotyczy llms.txt.</p>
+<h2>Gdzie ten plik leży w kolejce prac</h2>
+<p>Adrian Grabski powtarza heurystykę 80/20, z zastrzeżeniem, że nie jest to wynik pomiaru: najpierw dostępność dla botów AI, potem zwięzła kapsuła odpowiedzi, a dopiero potem wzmianki zewnętrzne. llms.txt nie należy do żadnego z tych trzech kroków jako warunek konieczny. Jest dodatkiem, który ma sens, gdy fundament już stoi.</p>
+<p>Najdroższy błąd w tej kolejności to zaczynanie od „optymalizacji pod AI”, zanim sprawdzi się, czy crawler w ogóle widzi treść. Treść musi być w HTML, a nie wyłącznie w obrazku albo PDF. Większość crawlerów AI nie wykonuje JavaScriptu, choć Googlebot to robi. Plik llms.txt nie naprawi strony, której główna oferta renderuje się dopiero w przeglądarce.</p>
+<h2>Jak ocenić, czy cokolwiek się zmieniło</h2>
+<p>Efekt zmian w treści typowo widać po 2–6 tygodniach, efekt wzmianek zewnętrznych po 3–6 miesiącach. Lag między publikacją a cytowaniem w ChatGPT to zwykle 6–12 tygodni i jest to obserwacja z projektów, nie oficjalny termin. Pojedyncza odpowiedź modelu to anegdota, nie dane. Jeśli po wdrożeniu llms.txt ktoś pokazuje jeden zrzut ekranu z ChatGPT, nie wiadomo, czy zmienił się plik, przypadek, czy po prostu inna sesja.</p>
+<p>Do decyzji potrzebny jest powtarzalny pomiar: te same pytania, te same platformy, wiele powtórzeń i przedział ufności. Dopiero wtedy można powiedzieć, czy jakakolwiek zmiana, w tym higiena plików, cokolwiek zrobiła.</p>
+<h2>Krótki wniosek</h2>
+<p>llms.txt warto dodać, bo jest tani i porządkuje informacje o encji. Nie warto go sprzedawać ani kupować jako motor widoczności w ChatGPT, Gemini, Perplexity albo Google AI Overviews. Jeśli chcesz uporządkować ten temat na własnej stronie, zacznij od przewodnika <a href="https://adriangrabski.pl/geo/llms-txt/">llms.txt</a> na <a href="https://adriangrabski.pl/">adriangrabski.pl</a>.</p>
+</article>
+<aside class="author">
+  <img src="avatar.jpg" width="96" height="96" alt="Adrian Grabski – specjalista SEO i GEO, Łódź">
+  <div>
+    <h2>Adrian Grabski</h2>
+    <p>Niezależny konsultant SEO i GEO z Łodzi, w wyszukiwarkach od 2002 roku. Prowadzi audyty, konsultacje i szkolenia, a od 2024 roku każda jego usługa obejmuje też widoczność w ChatGPT, Gemini, Perplexity i Google AI Overviews. Twórca darmowej społeczności Search AI Academy i kanału YouTube @czasai. Więcej na <a href="https://adriangrabski.pl/">adriangrabski.pl</a>.</p>
+  </div>
+</aside>
+<footer>
+  <p>© 2026 Adrian Grabski · <a href="https://adriangrabski.pl/freelancer-seo/">specjalista SEO</a> · <a href="https://adriangrabski.pl/audyt-seo/">audyt SEO</a> · <a href="https://adriangrabski.pl/geo/">przewodnik GEO</a></p>
+</footer>
+</div>
+</body>
+</html>
